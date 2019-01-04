@@ -7,7 +7,7 @@ import * as serviceWorker from './serviceWorker';
 
 //render출력 id root에 
 ReactDOM.render(<App />, document.getElementById('root'));
-ReactDOM.render(<App />, document.getElementById('root1'));
+
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: http://bit.ly/CRA-PWA

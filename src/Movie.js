@@ -1,42 +1,38 @@
-import React, {Component} from 'react';
+import React from 'react';
 import propType from 'prop-types';
-
 import './Movie.css';
 
-class Movie extends Component { 
+
+function MoviePoster({poster}){
+    return( 
+        <img src = {poster} alt="Movie Poster"/>
+    )
+}
+
+function Movie({title, poster}) {
+
+    return( 
+        <div>
+        <MoviePoster poster={poster}/>
+    <h1>{title}</h1>
+    </div>
+    )
+
+}
+
+Movie.propType ={
+
+    title:propType.string.isRequired,
+    poster:propType.string.isRequired
 
 
-    static propType = {
-        title: React.propType.string.isRequired,
-        poster: React.propType.string.isRequired
+}
 
-    }
-    render(){
-        console.log(this.props)
-        return(
-            <div>
-             <MoviePoster poster={this.props.poster}/>
-         <h1>{this.props.title}</h1>
-         </div>
-        )
-      }
- }  
+MoviePoster.propType ={
 
- class MoviePoster extends Component {
+    poster:propType.string.isRequired
 
-    static propType = {
 
-        poster: propType.string.isRequired
-    }
-
-    render(){
-        console.log(this.props)
-        return(
-            <img src ={this.props.poster}/>
-       )
-
-    }
-
- } 
+}
  export default Movie
     
